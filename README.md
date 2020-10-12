@@ -153,7 +153,6 @@ var resourcesApi = new ResourcesApi(evAccountUrl);
 ```C#
 var evAccountUrl  = "https://YOUR_ACCOUNT_NAME_HERE.exavault.com/api/v2/";
 var usersApi = new UsersApi(evAccountUrl);
-);
 ```
 
 ## Author
