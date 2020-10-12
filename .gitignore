@@ -1,0 +1,6 @@
+*.suo
+*.user
+_ReSharper.*
+bin/Debug
+obj
+packages
