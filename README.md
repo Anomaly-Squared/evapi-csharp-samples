@@ -21,7 +21,7 @@ Some of the sample scripts will assume your account contains the **ExaVault Quic
   $ git clone git@github.com:ExaVault/evapi-csharp-samples.git
   ```
 
-In Visual Studio Code, open `Example.sln`. 
+In Visual Studio Code, open `ExaVaultExamples.sln` file. 
 
 **Step 2 - Get your API Credentials** 
 
