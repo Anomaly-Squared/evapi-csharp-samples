@@ -1,7 +1,7 @@
 ﻿using System;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ExaVault.Api;
+using ExaVault.Client;
+using ExaVault.Model;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Text;
