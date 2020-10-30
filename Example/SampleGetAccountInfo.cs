@@ -57,7 +57,7 @@ namespace Example
 
                 // We must pass in our API Key and Access Token with every call, which we retrieved from the ConfigurationManager above
 
-                AccountResponse result = apiInstance.GetAccount(evApiKey, evAccessToken);
+                AccountResponse result = apiInstance.GetAccount(evApiKey, evAccessToken, "masterUser");
 
                 // If we got this far without the program ending, our call to getAccount succeeded and returned something
                 // The call returns a Swagger\Client\Model\AccountResponse object
@@ -74,6 +74,17 @@ namespace Example
 
                 Console.WriteLine("Account used : {0} GB  ({1} %)", accountCurrentSize, Math.Round(Convert.ToDouble(accountCurrentSize / accountMaxSize * 100), 1));
                 Console.WriteLine("Total Size   : {0} GB ", accountMaxSize);
+
+
+                foreach (var item in result.Included)
+                {
+                    if (item.Type == "user")
+                    {
+                       Console.WriteLine("Primary Email Address:  {0}", item.Attributes.Email);
+                    }
+                }
+     
+
                 Console.ReadLine();
             }
             catch (Exception ex)

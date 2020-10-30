@@ -103,7 +103,7 @@ namespace Example
                 ResourceResponse result = resourcesApi.CompressFiles(evApiKey, evAccessToken, requestBody);
 
                 // The ResourcesApi::compressFiles method returns a \Swagger\Client\Model\ResourceResponse object
-                Console.WriteLine("Created archive at {0}", result.Data.Attributes.Path);
+                Console.WriteLine("Created archive at zipped_files.zip");
                 Console.ReadLine();
             }
             catch (Exception ex)
