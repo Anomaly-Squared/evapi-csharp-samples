@@ -5,7 +5,7 @@ Welcome to the sample code for ExaVault's C# code library, which demonstrates ho
 
 ## Requirements
 
-To run these scripts, you'll need Visual Studio installed as well as .Net Framework 4.0 or later.
+To run these scripts, you'll need Visual Studio installed as well as .NET Framework 4.0 or later.
 
 You will also need an ExaVault account as well as and an API key and access token.
 
@@ -21,7 +21,7 @@ Some of the sample scripts will assume your account contains the **ExaVault Quic
   $ git clone git@github.com:ExaVault/evapi-csharp-samples.git
   ```
 
-In Visual Studio Code, open `ExaVaultExamples.sln` file. 
+In Visual Studio, open `ExaVaultExamples.sln` file. 
 
 **Step 2 - Get your API Credentials** 
 
@@ -43,7 +43,7 @@ You need to add your API credentials into the App.Config file. Edit this file li
 
 - replace **your\_key\_here** with your API key. Don't add any extra spaces or punctuation
 - replace **your\_token\_here** with your access token.
-- replace **your\_account_name** with the name of your ExaVault account
+- replace **your\_account\_name** with the name of your ExaVault account
 
 And save the file.
 
@@ -93,6 +93,7 @@ If everything worked, the sample code will run and connect to your account. You'
 ```bash
 Account used: 40GB (11.4%)
 Total size: 350GB
+Primary Email Address: tim@apple.com
 ```
 
 ## Running Other Sample Files
