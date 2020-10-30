@@ -161,7 +161,7 @@ namespace Example
 
                 // We must pass in our API Key and Access Token with every call, which we retrieved from the ConfigurationManager. 
                 result = notificationsApi.AddNotification(evApiKey, evAccessToken, notificationRequestBody);
-                Console.WriteLine("Created download notification for {0}", uploadFolder);
+                Console.WriteLine("Created upload notification for {0}", uploadFolder);
                 Console.ReadLine();
 
             }
