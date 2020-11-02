@@ -58,9 +58,9 @@ namespace Example
                 var resourcesApi = new ResourcesApi(evAccountUrl);
                 // We are uploading a sample file provided along with this script.
                 // It will have a different name in the account each time it is uploaded
-                var fileName = "../../files/ExaVault Quick Start.pdf";
+                var fileName = "../../files/dog.jpg";
                 byte[] file = System.IO.File.ReadAllBytes(fileName);
-                var targetFilename = "Quick Start" + new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds() + ".pdf";
+                var targetFilename = "dog" + new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds() + ".jpg";
 
                 int targetSize = file.Length;
 

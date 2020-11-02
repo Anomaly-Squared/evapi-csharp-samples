@@ -61,7 +61,7 @@ namespace Example
 
                 // We are uploading a sample file provided along with this script.
                 // It will have a different name in the account each time it is uploaded
-                var fileName = "../../files/ExaVault Quick Start.pdf";
+                var fileName = "../../files/dog.jpg";
                 byte[] file = System.IO.File.ReadAllBytes(fileName);
 
                 int targetSize = file.Length;
@@ -74,7 +74,7 @@ namespace Example
                 for (int i = 1; i < 6; i++)
                 {
                     // We're  uploading the same file under different names to make sure we have multiple files in our target folder
-                    var targetFilename = "/" + parentFolder + "/Quick Start " + i + ".pdf";
+                    var targetFilename = "/" + parentFolder + "/dog" + i + ".jpg";
 
 
                     // The uploadFile method of the ResourcesApi class will let us upload a file to our account

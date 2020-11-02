@@ -9,7 +9,7 @@ To run these scripts, you'll need Visual Studio installed as well as .NET Framew
 
 You will also need an ExaVault account as well as and an API key and access token.
 
-Some of the sample scripts will assume your account contains the **ExaVault Quick Start.pdf** file and the **Sample Files and Folders** folder, which come pre-loaded with a new account. You may need to make changes to `SampleUploadFiles.cs` and `SampleDownloadCsvFiles.cs` if those files are not present.
+Some of the sample scripts will assume your account contains the **Sample Files and Folders** folder, which come pre-loaded with a new account. You may need to make changes to `SampleDownloadCsvFiles.cs` if that folder is not present.
 
 ## Running Your First Sample
 
@@ -101,7 +101,7 @@ Primary Email Address: tim@apple.com
 There are several other sample classes that you can now run. You won't need to repeat the steps to set up the App.Config each time - the same environment information is used for all of the sample scripts.
 Some of the sample scripts will make changes to your account (uploading, creating shares or notifications, etc). Those are marked with an asterisk below:
 
-Script                        | Purpose    \*=Makes changes to your account when run                                   | APIs Used                      |
+Script                        | Purpose                                                                                | APIs Used                      |
 ------------------------------|----------------------------------------------------------------------------------------|--------------------------------|
 SampleGetAccountInfo.cs       | List the amount of available space for your account                                    | AccountApi                     |
 SampleAddNotifications.cs     | Add upload and download notifications<br/>_\*adds folders to your account_             | ResourcesApi, NotificationsApi |
@@ -111,7 +111,7 @@ SampleDownloadCsvFiles.cs     | Search for files matching a certain extension, t
 SampleGetFailedLogins.cs      | List usernames who had a failed login in the last 24 hours                             | ActivityApi                    |
 SampleListUsers.cs            | Generate a report of users in your account                                             | UsersApi                       |
 SampleSharedFolder.cs         | Create a new shared folder with a password<br />_\*adds a folder to your account_      | ResourcesApi, SharesApi        |
-SampleUploadFiles.cs          | Upload a file to your account.<br />_\*uploads sample PDFS to your account_            | ResourcesApi                   |
+SampleUploadFiles.cs          | Upload a file to your account.<br />_\*uploads sample jpgs to your account_            | ResourcesApi                   |
 
 ## If Something Goes Wrong
 
