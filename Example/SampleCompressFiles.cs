@@ -110,7 +110,7 @@ namespace Example
             {
                 // If there was a problem, such as our credentials not being correct, or the URL not working, 
                 // there will be an exception thrown 
-                Console.WriteLine("Exception when calling UsersApi->addUser: " + ex.Message);
+                Console.WriteLine("Exception when calling resourcesApi: " + ex.Message);
                 Console.ReadLine();
             }
         }
