@@ -35,9 +35,9 @@ You need to add your API credentials into the App.Config file. Edit this file li
 
 ```bash
   <appSettings>
-    <add key="ACCOUNT_URL" value="https://your_account_name.exavault.com/api/v2"/>
     <add key="EV_KEY" value="your_key_here"/>
     <add key="EV_TOKEN" value="your_access_token"/>
+    <add key="ACCOUNT_URL" value="https://your_account_name.exavault.com/api/v2"/>
   </appSettings>
 ```
 
