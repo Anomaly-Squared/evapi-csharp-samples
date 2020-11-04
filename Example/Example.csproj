@@ -48,10 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExaVault, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ExaVault.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -69,6 +65,9 @@
     </Reference>
     <Reference Include="RestSharp">
       <HintPath>bin\Release\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ExaVault">
+      <HintPath>bin\Release\ExaVault.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
