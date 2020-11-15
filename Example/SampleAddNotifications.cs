@@ -73,8 +73,8 @@ namespace Example
 
                 // API methods that take a JSON body, such as the addFolder method, require us to submit an object with the 
                 // parameters we want to send to the API. This call requires a single parameter path
-                var requestBody = new Body8(uploadFolder);
-                // See https://github.com/ExaVault/evapi-csharp/blob/main/docs/Body8.md for the details of Body8 model
+                var requestBody = new AddFolderRequestBody(uploadFolder);
+                // See https://github.com/ExaVault/evapi-csharp/blob/main/docs/AddFolderRequestBody.md for the details of AddFolderRequestBody model
 
                 // We have to pass the $API_KEY and $ACCESS_TOKEN with every API call. 
                 ResourceResponse result = resourcesApi.AddFolder(evApiKey, evAccessToken, requestBody);
@@ -85,8 +85,8 @@ namespace Example
                 Console.WriteLine("Created new folder {0}", result.Data.Attributes.Path);
 
                 // Now we can add the second folder
-                // See https://github.com/ExaVault/evapi-csharp/blob/main/docs/Body8.md for the details of Body8 model
-                requestBody = new Body8(downloadFolder);   
+                // See https://github.com/ExaVault/evapi-csharp/blob/main/docs/AddFolderRequestBody.md for the details of AddFolderRequestBody model
+                requestBody = new AddFolderRequestBody(downloadFolder);   
                 result = resourcesApi.AddFolder(evApiKey, evAccessToken, requestBody);
 
                 // The addFolder method of the ResourcesApi returns a \Swagger\Client\Model\ResourceResponse object
@@ -124,14 +124,14 @@ namespace Example
                 //   as a resource identifier here. For example, if the ID of the downloads folder is 23422, we could pass
                 //   id:23422 in the resource parameter of this call.
 
-                var bodyType = Body4.TypeEnum.Folder;
+                var bodyType = AddNotificationRequestBody.TypeEnum.Folder;
                 var bodyResource = downloadFolder;
-                var bodyAction = Body4.ActionEnum.Download;
+                var bodyAction = AddNotificationRequestBody.ActionEnum.Download;
                 var bodyUsernames = new List<string>(new string[] { "notice_user_all" });
                 var bodySendEmail = true;
 
-                var notificationRequestBody = new Body4(bodyType, bodyResource, bodyAction, bodyUsernames, bodySendEmail);
-                // See https://github.com/ExaVault/evapi-csharp/blob/main/docs/Body4.md for the details of Body4 model
+                var notificationRequestBody = new AddNotificationRequestBody(bodyType, bodyResource, bodyAction, bodyUsernames, bodySendEmail);
+                // See https://github.com/ExaVault/evapi-csharp/blob/main/docs/AddNotificationRequestBody.md for the details of AddNotificationRequestBody model
 
 
                 // We must pass in our API Key and Access Token with every call, which we retrieved from the ConfigurationManager.
@@ -151,9 +151,9 @@ namespace Example
                 //   - We have added an optional custom message to be included in each notification email
 
 
-                notificationRequestBody.Type = Body4.TypeEnum.Folder;
+                notificationRequestBody.Type = AddNotificationRequestBody.TypeEnum.Folder;
                 notificationRequestBody.Resource = uploadFolder;
-                notificationRequestBody.Action = Body4.ActionEnum.Upload;
+                notificationRequestBody.Action = AddNotificationRequestBody.ActionEnum.Upload;
                 notificationRequestBody.Usernames = new List<string>(new string[] { "notice_user_all" });
                 notificationRequestBody.SendEmail = true;
                 notificationRequestBody.Recipients = new List<string>(new string[] { "sally@example.com", "sidharth@example.com", "lgomez@example.com" });

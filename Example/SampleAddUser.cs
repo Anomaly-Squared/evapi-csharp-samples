@@ -61,13 +61,16 @@ namespace Example
                 var homeResource = "/Home directory for API Users";
                 var email = "test@example.com";
                 var password = "99drowssaP";
-                var role = Body5.RoleEnum.User;
-                var permission = "download,upload,modify,list,changePassword,share,notification,delete";
+                var role = AddUserRequestBody.RoleEnum.User;
+                var permission = new UsersPermissions(true, true, true, true, true, true, true, true, true, true);
+                //var permission =  //"download,upload,modify,list,changePassword,share,notification,delete";
                 var timeZone = "UTC";
                 var nickname = "Created via the API";
                 var welcomeEmail = true;
 
-                var requestBody = new Body5(newUsername, nickname, homeResource, email, password, role, permission, 
+
+
+                var requestBody = new AddUserRequestBody(newUsername, nickname, homeResource, email, password, role, permission, 
                                             timeZone, null, null, welcomeEmail);
 
                 // We must pass in our API Key and Access Token with every call, which we retrieved from the ConfigurationManager.
