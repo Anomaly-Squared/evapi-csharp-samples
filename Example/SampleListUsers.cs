@@ -86,9 +86,9 @@ namespace Example
                 var outputFilename = "../../files/users_listing.csv";
 
                 List<string> csvColumnHeaders = new List<string>()
-                        {"Id", "Username", "Nickname", "Email Address", "Home Folder", "Role", "Time Zone",
-                        "Download", "Upload", "Modify", "Delete", "List", "Change Password", "Share", "Notification",
-                        "View Form Data", "Delete Form Data", "Expiration", "Last Logged In", "locked", "Created", "Modified" };
+                        {"Id", "Username", "Nickname", "Email Address", "Home Folder", "Role", "Time Zone", "Created", "Modified",
+                        "Expiration", "locked", "Last Logged In", "Download", "Upload", "Modify", "Delete", "List", "Change Password",
+                        "Share", "Notification", "View Form Data", "Delete Form Data" };
 
                 // Build the file header
                 string csvHeader = "";
@@ -123,12 +123,11 @@ namespace Example
                     csvLine += user.Attributes.TimeZone + ",";
                     csvLine += user.Attributes.Created + ",";
                     csvLine += user.Attributes.Modified + ",";
-                    csvLine += user.Attributes.AccessTimestamp + ",";
                     csvLine += user.Attributes.Expiration + ",";
                     csvLine += (user.Attributes.Status == 0 ? "" : "locked") + ",";
 
                     // The access timestamp returns a non-standard value representing 'never'
-                    csvLine += (user.Attributes.AccessTimestamp.Substring(0, 4) == "0000" ? "never" : user.Attributes.AccessTimestamp);
+                    csvLine += (user.Attributes.AccessTimestamp.Substring(0, 4) == "0000" ? "never" : user.Attributes.AccessTimestamp) + ",";
 
                     // The UserAttributes::getPermissions method returns a \Swagger\Client\Model\UserPermissions object,
                     //   which contains the true/false flags for each of the permissions available to a user
