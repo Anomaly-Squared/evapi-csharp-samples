@@ -118,7 +118,7 @@ namespace Example
                     csvLine += user.Attributes.Username + ",";
                     csvLine += user.Attributes.Nickname + ",";
                     csvLine += user.Attributes.Email + ",";
-                    csvLine += user.Attributes.HomeDir + ",";
+                    csvLine += user.Attributes.HomePath + ",";
                     csvLine += ((UserAttributes.RoleEnum)user.Attributes.Role).ToString() + ",";
                     csvLine += user.Attributes.TimeZone + ",";
                     csvLine += user.Attributes.Created + ",";
