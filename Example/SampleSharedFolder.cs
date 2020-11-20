@@ -106,11 +106,9 @@ namespace Example.files
                 var type = AddShareRequestBody.TypeEnum.Sharedfolder;
                 var name = "Share";
                 List<string> resources = new List<string>();
-                resources.Add(folderPath); 
-                
-                List<AddShareRequestBody.AccessModeEnum> accessMode = new List<AddShareRequestBody.AccessModeEnum>();
-                accessMode.Add(AddShareRequestBody.AccessModeEnum.Download);
-                accessMode.Add(AddShareRequestBody.AccessModeEnum.Upload);
+                resources.Add(folderPath);
+
+                AccessMode accessMode = new AccessMode(true, true, false, false);
                 var password = "99drowssaP?";
 
                 var requestBody = new AddShareRequestBody(type, name, resources, accessMode, null, null, null, null, null, null, null, password);
