@@ -71,10 +71,8 @@ namespace Example
                 var accountMaxSize = quota.DiskLimit / (1024 * 1024 * 1024);
                 var accountCurrentSize = quota.DiskUsed / (1024 * 1024 * 1024);
 
-
                 Console.WriteLine("Account used : {0} GB  ({1} %)", accountCurrentSize, Math.Round(Convert.ToDouble(accountCurrentSize / accountMaxSize * 100), 1));
                 Console.WriteLine("Total Size   : {0} GB ", accountMaxSize);
-
 
                 foreach (var item in result.Included)
                 {
@@ -83,8 +81,6 @@ namespace Example
                        Console.WriteLine("Primary Email Address:  {0}", item.Attributes.Email);
                     }
                 }
-     
-
                 Console.ReadLine();
             }
             catch (Exception ex)

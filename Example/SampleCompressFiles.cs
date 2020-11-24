@@ -99,7 +99,7 @@ namespace Example
                 // See https://www.exavault.com/developer/api-docs/#operation/compressFiles for the request body schema
                 //
                 // This will overwrite an existing zip file with a new one
-                var requestBody = new Body10(compressResources, "/", "zipped_files.zip");
+                var requestBody = new CompressFilesRequestBody(compressResources, "/", "zipped_files.zip");
                 ResourceResponse result = resourcesApi.CompressFiles(evApiKey, evAccessToken, requestBody);
 
                 // The ResourcesApi::compressFiles method returns a \Swagger\Client\Model\ResourceResponse object

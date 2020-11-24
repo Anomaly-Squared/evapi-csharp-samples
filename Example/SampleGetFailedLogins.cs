@@ -98,13 +98,13 @@ namespace Example
                 }
 
                 Console.WriteLine(failedLogins.Count + " Users with failed logins: " );
-                Console.WriteLine( "Username        Count");
-                Console.WriteLine("============    ============");
+                Console.WriteLine( "Username                  Count");
+                Console.WriteLine("===================    ============");
 
                 foreach (var item in failedLogins)
                 {
-                    string key = item.Key.PadRight(12);
-                    string value = item.Value.ToString().PadRight(12);
+                    string key = item.Key.PadRight(18);
+                    string value = item.Value.ToString().PadLeft(12);
 
                     Console.Write(key);
                     Console.WriteLine(value);

@@ -65,7 +65,7 @@ namespace Example.files
 
                 // API methods that take a JSON body, such as the addFolder method, require us to submit an object with the 
                 // parameters we want to send to the API. This call requires a single parameter path
-                var requestBody = new Body8(folderPath);
+                var requestBody = new AddFolderRequestBody(folderPath);
 
                 //// We have to pass the $API_KEY and $ACCESS_TOKEN with every API call. 
                 ResourceResponse result = resourcesApi.AddFolder(evApiKey, evAccessToken, requestBody);
@@ -103,19 +103,15 @@ namespace Example.files
                 //   id:23422 in the resource parameter of this call.
 
 
-                var type = Body16.TypeEnum.Sharedfolder;
+                var type = AddShareRequestBody.TypeEnum.Sharedfolder;
                 var name = "Share";
                 List<string> resources = new List<string>();
                 resources.Add(folderPath);
 
-                List<string> accessMode = new List<string>();
-                accessMode.Add("download");
-                accessMode.Add("upload");
-
+                AccessMode accessMode = new AccessMode(true, true, false, false);
                 var password = "99drowssaP?";
 
-                var requestBody = new Body16(type, name, resources, accessMode, null, null, null, null, null, null, null, password);
-
+                var requestBody = new AddShareRequestBody(type, name, resources, accessMode, null, null, null, null, null, null, null, password);
 
                 // We have to pass the $API_KEY and $ACCESS_TOKEN with every API call. 
                 ShareResponse result = sharesApi.AddShare(evApiKey, evAccessToken, requestBody);
