@@ -91,16 +91,8 @@ namespace Example
 
 
                 // Now that we used the ResourcesApi to gather all of the IDs of the resources that 
-                // matched our search, we will use the DownloadApi to download multiple files
-                /****************************************************************************************/
-                /** NOTE - THIS IS AN UNUSUAL WORKAROUND REQUIRED BY THE AUTO-GENERATED PHP ClIENT SDK **/
-                /****************************************************************************************/
-                /** Ideally, we would use the ResourcesApi for all resources calls, but due to a bug in
-                 * the library that creates the ResourcesApi, you cannot download multiple files at once
-                 * using that API. Instead, use the DownloadApi download methods which has the same parameters and
-                 * output as the ResourcesApi See https://www.exavault.com/developer/api-docs/#operation/download
-                 */
-                /************************************************************************************/
+                // matched our search, we will use the download method to retrieve the files  files
+                // See  https://www.exavault.com/developer/api-docs/#operation/download
                 byte[] downloadResult = resourceApi.Download(evApiKey, evAccessToken, downloads);
 
                 // The body of the result is the binary content of our file(s), 
